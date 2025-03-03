@@ -78,7 +78,7 @@ function christmasTree(number: number): void {
         }
 
         // add spaces
-        for (let k: number = 0; k < number - i - 1; k++) { // spaces on each side, zero in the last row
+        for (let k: number = 0; k < number - i - 1; k++) { // spaces on each side, no spaces in the last line
             line = " " + line + " "
         }
 
