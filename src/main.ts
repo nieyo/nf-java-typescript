@@ -1,8 +1,8 @@
 // AGE
-let age:number = 3
+let age: number = 3
 console.log("age: " + age)
 
-for (let i:number = 1; i <= age; i++) {
+for (let i: number = 1; i <= age; i++) {
     console.log(i + "\r")
 }
 
@@ -14,7 +14,7 @@ if (age >= 18) {
 console.log("------------------------")
 
 // SCORE
-let score:number = 115
+let score: number = 115
 console.log("score: " + score)
 
 if (score != 0) {
@@ -29,7 +29,7 @@ if (score) {
 console.log("------------------------")
 
 // USERNAME
-let username:String = "jonas"
+let username: string = "jonas"
 console.log("username: " + username)
 
 if (username !== "") {
@@ -44,7 +44,7 @@ if (username) {
 console.log("------------------------")
 
 // ADMIN
-let isAdmin:boolean = false
+let isAdmin: boolean = false
 console.log("isAdmin: " + isAdmin)
 
 if (isAdmin) {
@@ -58,8 +58,39 @@ if (!isAdmin) {
 }
 console.log("------------------------")
 
+christmasTree(5)
 
+function christmasTree(number: number): void {
 
+    // going through the individual line
+    for (let i: number = 0; i < number; i++) {
+        let line: string = "" // Reset line for each iteration
+
+        // add stars
+        for (let j: number = 0; j < 2 * i + 1; j++) { // next odd number every line
+            line += "*"
+        }
+
+        // add spaces
+        for (let k: number = 0; k < number - i - 1; k++) { // spaces on each side, zero in the last row
+            line = " " + line + " "
+        }
+
+        console.log(line)
+    }
+
+    let trunk: string = ""
+
+    for (let j:number = 0; j < number - 1; j++) { // fill half line -1 with spaces
+        trunk += " "
+    }
+
+    trunk += "*" // add trunk
+
+    for (let i:number = 0; i < number; i++) {
+        console.log(trunk)
+    }
+}
 
 
 
