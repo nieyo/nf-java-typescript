@@ -58,11 +58,17 @@ if (!isAdmin) {
 }
 console.log("------------------------")
 
+
+
+// -----
+// BONUS
+// -----
+
 christmasTree(5)
 
 function christmasTree(number: number): void {
 
-    // going through the individual line
+    // 'triangle', going through the individual line
     for (let i: number = 0; i < number; i++) {
         let line: string = "" // Reset line for each iteration
 
@@ -79,14 +85,12 @@ function christmasTree(number: number): void {
         console.log(line)
     }
 
+    // build trunk
     let trunk: string = ""
-
     for (let j:number = 0; j < number - 1; j++) { // fill half line -1 with spaces
         trunk += " "
     }
-
-    trunk += "*" // add trunk
-
+    trunk += "#" // add 'trunk' char
     for (let i:number = 0; i < number; i++) {
         console.log(trunk)
     }
