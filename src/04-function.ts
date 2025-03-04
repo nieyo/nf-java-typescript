@@ -43,3 +43,14 @@ console.log("Liste mit quadrierten Zahlen", squaredList)
 console.log("Liste ohne die 2 kleinsten und 4 größten Werte", removedHighLowList)
 console.log("Liste ohne durch 4 teilbare Zahlen", removedAllDivisibleByFourList)
 console.log("Summe der verbleibenden Zahlen", sumOfList)
+
+
+function performOperation(operation: (x: number, y: number) => number, x: number, y: number): void {
+    console.log(`Ergebnis: ${operation(x, y)}`);
+}
+
+const add = (a: number, b: number) => a + b;
+const multiply = (a: number, b: number) => a * b;
+
+performOperation(add, 5, 3);      // Ausgabe: Ergebnis: 8
+performOperation(multiply, 5, 3); // Ausgabe: Ergebnis: 15
