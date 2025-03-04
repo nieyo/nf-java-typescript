@@ -15,7 +15,7 @@ console.log("")
 
 const numbers2 = [5, 23, 11, 46, 98, 13, 75, 28, 41, 67];
 console.log("Ursprüngliches Array", numbers2)
-const sumOfNumbers2 = numbers2.reduce((sum, number)=> sum + number, 0)
+const sumOfNumbers2 = numbers2.reduce((sum, number)=> sum + number, 0) // 0 is the start value for reduce()
 console.log("Summe", sumOfNumbers2)
 console.log("")
 
