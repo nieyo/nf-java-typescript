@@ -1,6 +1,0 @@
-console.log("###########################")
-console.log("#                         #")
-console.log("#            ↑            #")
-console.log("#       select page       #")
-console.log("#                         #")
-console.log("###########################")
