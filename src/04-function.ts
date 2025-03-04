@@ -27,14 +27,16 @@ console.log("")
 
 // BONUS
 const list = [15, 6, 3213, 9, 0, 12, 8464 , 1, 1264, 481, 186, 1031, 194];
-const sortedList = list.slice().sort((a, b) => a - b) // slice to copy array as sort doesn't return a copy
-const squaredList = list.map(number => number * number)
-const removedHighLowList = list.slice().sort((a, b) => a - b).slice(2,-4) // list.length-4 == -4
-const removedAllNotDividableByFour = list.filter(number => number % 4 === 0)
+const sortedList = list.slice().sort((a, b) => b - a) // slice to copy array as sort doesn't return a copy
+const squaredList = sortedList.map(number => number * number)
+const removedHighLowList = squaredList.slice(4,-2) // list.length-2 == -2
+const removedAllDivisibleByFourList = removedHighLowList.filter(number => number % 4 !== 0)
+const sumOfList = removedAllDivisibleByFourList.reduce((sum, number)=> sum + number, 0)
 
 console.log("---- BONUS ----")
 console.log("Ursprüngliche Liste", list)
-console.log("Sortierte Liste", sortedList)
+console.log("Absteigend sortierte Liste", sortedList)
 console.log("Liste mit quadrierten Zahlen", squaredList)
 console.log("Liste ohne die 2 kleinsten und 4 größten Werte", removedHighLowList)
-console.log("Liste mit nur durch 4 teilbaren Zahlen", removedAllNotDividableByFour)
+console.log("Liste ohne durch 4 teilbare Zahlen", removedAllDivisibleByFourList)
+console.log("Summe der verbleibenden Zahlen", sumOfList)
